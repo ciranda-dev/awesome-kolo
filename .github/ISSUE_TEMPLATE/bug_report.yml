@@ -1,0 +1,40 @@
+name: Bug report
+description: Report something that does not work as it should
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: "What is wrong"
+      description: "Describe the broken link, the wrong entry or the problem you found."
+    validations:
+      required: true
+  - type: input
+    id: entry
+    attributes:
+      label: "Entry or section"
+      description: "Name the entry or the section of the list."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "What you expected"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "How to see it"
+      description: "Steps or a link that shows the problem."
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Before you send"
+      options:
+        - label: "I searched the existing issues and did not find this one"
+          required: true
+        - label: "This is not a security problem (those go to the [private report](https://github.com/ciranda-dev/awesome-kolo/security/advisories/new))"
+          required: true
